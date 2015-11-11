@@ -626,7 +626,25 @@ To visualize the data based on generated attributes, 2-D plotting data graph is 
 
 Precision-recall result and accuracy of each methods are shown in Fig. \ref{fig:confmatrix-knn}, \ref{fig:confmatrix-k-means}, and \ref{fig:confmatrix-cascade}. 
 
-Tolong tambahin Filo... misal, definisi akurasi, f1-score, dsb.  
+The accuracy, precision, recall, and f1-score are calculated according this the following formula \cite{Olson2008}:\newline
+
+\begin{equation}
+\text{accuracy} = \frac{TP+TN}{TP+FP+FN+TN} 
+\end{equation}
+
+\begin{equation}
+\text{recall} = \frac{TP}{TP+FN} 
+\end{equation}
+
+\begin{equation}
+\text{precision}=\frac{TP}{TP+FP}
+\end{equation}
+
+\begin{equation}
+F_1 = 2 \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{\mathrm{precision} + \mathrm{recall}}.
+\end{equation}
+
+where TP are number of true positive, TN are number of true negative, FP are number of false positive, and FN are number of false negative.
 
 % \begin{equation}
 % Accuracy = \frac{TP+TN}{TP + FN + TN + FP}\times100\%
