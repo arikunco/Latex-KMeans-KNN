@@ -564,10 +564,31 @@ In this paper, each class was represented by integer. For combination 1, integer
 
 
 \subsection{K-Means Clustering}
-Tolong Filo isi
+K-means algorithm is a clustering algorithm that is invented by LLoyd \cite{Lloyd1982}.The aim of the K-means algorithm is to divide M points in N dimensions into K clusters so that the within-cluster sum of squares is minimize \cite{Hartigan1979}. K-means algorithm uses an iterative technique to minimize the sum of squares.
+
+Given an initial set of k means m1$^{\left(1\right)}$
+,…,mk$^{\left(1\right)}$ (see below), the algorithm consist of two phase:\newline
+
+$\boldsymbol{Assignment\ step}$: Assign each observation to the cluster whose mean yields the least within-cluster sum of squares (WCSS). Since the sum of squares is the squared Euclidean distance, this is intuitively the "nearest" mean.
+\begin{equation}
+S_i^{(t)} = \big \{ x_p : \big \| x_p - m^{(t)}_i \big \|^2 \le \big \| x_p - m^{(t)}_j \big \|^2 \ \forall j, 1 \le j \le k \big\}
+\end{equation}
+where each $x_p $is assigned to exactly one $S^{(t)}$, even if it could be assigned to two or more of them.\newline
+$\boldsymbol{Update\ step}$: Calculate the new means to be the centroids of the observations in the new clusters.
+\begin{equation}
+m^{(t+1)}_i = \frac{1}{|S^{(t)}_i|} \sum_{x_j \in S^{(t)}_i} x_j
+\end{equation}
 
 \subsection{K-Nearest Neighbor}
-Tolong Filo isi
+K-nearest-neighbor (kNN) classification is one of the most fundamental and simple classification algorithm. It should the first choices for a classification study if we have no prior knowledge about the data. It was first proposed by Fix and Hodges \cite{EvelynFix1951}. 
+
+The k-nearest-neighbor classifier is commonly based on the Euclidean distance between a test sample and the specified training samples. Let $x_i$ be an input sample with p features ($x_{i1}$,$x_{i2}$,…,$x_{ip}$) , n be the total number of input samples (i=1,2,…,n) and p the total number of features (j=1,2,…,p) . The Euclidean distance between sample $x_i$ and $x_l$ (l=1,2,…,n) is defined as
+
+\begin{equation}
+d({\textbf x}_i,{\textbf x}_l) = \sqrt{(x_{i1}-x_{l1})^2 + (x_{i2}-x_{l2})^2 + \cdots + (x_{ip}-x_{lp})^2}
+\end{equation}
+
+After calculating the distance of training samples to input sample $x_i$, select \textit{k} closest sample $x_m$, and we finally can base the assignment of a label upon $x_i$ by the maximum predominance of a particular class in its neighborhood \cite{Cover1967}.
 
 \section{Results and Discussion}
 
